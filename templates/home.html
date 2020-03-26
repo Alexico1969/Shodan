@@ -1,0 +1,42 @@
+<html>
+    <head>
+      <title>model trains</title>
+      <style>
+        #logo{ width: 50px;}
+        h1{margin-top: 50px;}
+        body{background-color: beige; text-align: center; font-family: 'Trebuchet MS', cursive;}
+        table, th,td{border: 1px black solid; margin: 20px; padding: 5px;}
+        input[type=text], select {width: 600px;padding: 12px ;margin: 8px;}
+        input[type=submit], select {width: 100px;padding: 12px ;margin: 8px; display: inline-block; font-size: 20px;}
+        input[type=submit]:hover, select {background-color: bisque;}
+      </style>
+    </head>
+
+    <body>
+      <br/>
+      <h1>My collection of model trains<h1>
+      <img src="https://cdn.shopify.com/s/files/1/2217/1715/products/finished_gotcha_hand_1024x1024.png?v=1531617943" id = "logo">
+
+      <h1>Search</h1>
+
+      <form method="POST" action="">
+        <input type="text" id="search_string" name="sstring">
+        <input type="submit" value="Submit">
+      </form>
+      
+      <p>Catch: {{catch}}</p>
+          
+      <h1>Catch</h1>
+        <table>
+          <tr><th>IP</th><th>Data</th><th></th></tr>
+          {% for key, value in catch %}
+          <tr><td>{{key}}</td><td>{{value}}</td><td></td></tr>
+          {% endfor %}          
+
+        </table>
+
+
+
+
+    </body>
+  </html>
